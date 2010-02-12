@@ -1,6 +1,11 @@
 window.onload = function()
 {
-	var b = Titanium.UI.createButton({
+  var button4 = Titanium.UI.createButton({
+    id:'button4',
+    title:'Buscar',
+    height:20,
+  });
+  var b = Titanium.UI.createButton({
     title:'Volver Home'
   });
   b.addEventListener('click',function()

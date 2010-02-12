@@ -8,6 +8,12 @@
 	<statusbar-style>opaque</statusbar-style>
      <windows>
         <window>
+            <id>resultadobusqueda</id>
+            <url>resultadobusqueda.html</url>
+            <backgroundColor>#111</backgroundColor>
+			<fullscreen>false</fullscreen>
+        </window>
+        <window>
             <id>initial</id>
             <url>index.html</url>
             <backgroundColor>#111</backgroundColor>
