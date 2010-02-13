@@ -8,20 +8,6 @@
 	<statusbar-style>opaque</statusbar-style>
      <windows>
         <window>
-            <id>resultadobusqueda</id>
-            <url>resultadobusqueda.html</url>
-            <backgroundColor>#111</backgroundColor>
-			<fullscreen>false</fullscreen>
-        </window>
-        <window>
-            <id>initial</id>
-            <url>index.html</url>
-            <backgroundColor>#111</backgroundColor>
-			<icon>ti://featured</icon>
-			<barColor>#000</barColor>
-			<fullscreen>false</fullscreen>
-        </window>
-        <window>
             <id>buscar</id>
             <url>buscar.html</url>
             <backgroundcolor>#111</backgroundcolor>

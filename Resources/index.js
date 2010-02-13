@@ -65,6 +65,15 @@ window.onload = function()
 		});
 
     picker.setData(data);
+		var b = Titanium.UI.createButton({
+			title:'Cambiar Geopos'
+		});
+		b.addEventListener('click',function()
+		{
+			var home_window = Titanium.UI.createWindow({url:'geopos.html',title:'Geopos'});
+			home_window.open({animated:true});
+		});
+		Titanium.UI.currentWindow.setLeftNavButton(b);
 };
     
 

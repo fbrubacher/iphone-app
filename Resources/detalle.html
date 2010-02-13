@@ -1,0 +1,70 @@
+<html>
+  <head>
+	<script>
+	var win = Titanium.UI.currentWindow;
+	
+	var section1Template = {
+		backgroundColor:'#670000',
+		selectedBackgroundColor:'#670000',
+		selectionStyle:'none',
+		color:'#fff',
+		layout:[
+		{type:'text', name:'item', color:'white', fontSize:20, fontFamily:'Marker Felt',fontWeight:'bold', left:10, top:3, height:30, width:150},
+		{type:'text', name:'cost', color:'white', fontSize:14, left:10, top:26, height:25, width:150},
+		{type:'image', name:'addImage', height:27, width:27, top:10, right:10}
+		]		
+	}	
+	var section1Data = [
+		{item:'Burger', cost:'$1.99',addImage:'images/addDefault.png'},
+		{item:'Cheese Burger', cost:'$2.99', addImage:'images/addDefault.png'},
+		{item:'Double Cheese', cost:'$3.99', addImage:'images/addDefault.png'},
+		{item:'Salad', cost:'$0.99', addImage:'images/addDefault.png'}
+		
+		
+	]
+  var iData = [
+      {html:'<div><img src="Mail.png"/> Input 3</div>', hasChild:true}
+  ]
+	var section1 = Titanium.UI.iPhone.createGroupedSection({
+		template:section1Template,
+		type:'input',
+		data:iData,
+		color:'white',
+		footer:'Footer',
+		header:'Header',
+		rowHeight:50
+	});
+	var selectedData = {};
+	
+	//
+	// handle click events and toggle layout based on click
+	//
+
+  var buttonData = [
+      {title:'Descripciones'},
+      {title:'Detalles del menu'},
+      {title:'Secreto'}
+  ];
+
+  var buttonSection = Titanium.UI.iPhone.createGroupedSection({footer:'Button Group Footer', header:'Button Group', type:'button',data:buttonData});
+  buttonSection.addEventListener('click',function(e)
+  {
+      a.setMessage('You clicked index ' + e.index + ' section row ' + e.row + ' section ' + e.section);
+      a.show();
+  });
+	
+	var groupedView = Titanium.UI.iPhone.createGroupedView({
+		backgroundColor:'transparent', 
+		borderColor:'#390A0E'
+	});
+	groupedView.addSection(section1);
+	groupedView.addSection(buttonSection);
+	
+	win.addView(groupedView);
+	win.showView(groupedView);
+	
+	</script>
+  </head>
+<body></body>
+</html>
+
